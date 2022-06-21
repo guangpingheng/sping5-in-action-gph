@@ -1,0 +1,25 @@
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:mem:taco;MODE=MySQL;DATABASE_TO_LOWER=TRUE
+    url: jdbc:h2:mem:taco
+    username: sa
+    password:
+
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+        trace: true
+      path: /h2-console
+
+#logging:
+#  level: debug
